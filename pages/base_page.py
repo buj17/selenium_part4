@@ -6,6 +6,8 @@ from selenium.webdriver.common.by import ByType
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
+from .locators import BasePageLocators
+
 
 class BasePage:
     def __init__(self, browser: WebDriver, url: str, timeout: int = 10):
@@ -15,6 +17,13 @@ class BasePage:
 
     def open(self):
         self.browser.get(self.url)
+
+    def go_to_login_page(self):
+        login_link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
+        login_link.click()
+
+    def should_be_login_link(self):
+        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), 'Login link is not presented'
 
     def is_element_present(self, how: ByType, what: str):
         try:
