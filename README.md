@@ -26,8 +26,8 @@ git clone https://github.com/buj17/selenium_part4
 cd selenium_part4
 ```
 
-#### Запустить тест
+#### Запустить тесты
 
 ```bash
-uv run pytest -v --tb=line --language=en test_main_page.py
+uv run pytest -v --tb=line --language=en -m need_review
 ```
