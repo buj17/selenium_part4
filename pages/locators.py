@@ -2,10 +2,10 @@ from selenium.webdriver.common.by import By
 
 
 class BasePageLocators:
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
-    BASKET_BUTTON = (By.CSS_SELECTOR, ".btn-group a.btn-default")
-    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+    LOGIN_LINK = (By.CSS_SELECTOR, '#login_link')
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, '#login_link_inc')
+    BASKET_BUTTON = (By.CSS_SELECTOR, '.btn-group a.btn-default')
+    USER_ICON = (By.CSS_SELECTOR, '.icon-user')
 
 
 class LoginPageLocators:
@@ -23,3 +23,8 @@ class ProductPageLocators:
     PRODUCT_PRICE = (By.CSS_SELECTOR, '.product_main .price_color')
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, '.alert-success:first-child .alertinner strong')
     BASKET_TOTAL_MESSAGE = (By.CSS_SELECTOR, '.alert-info .alertinner strong')
+
+
+class BasketPageLocators:
+    BASKET_ITEMS = (By.CSS_SELECTOR, '.basket-items')
+    EMPTY_BASKET_MESSAGE = (By.CSS_SELECTOR, '#content_inner p')
